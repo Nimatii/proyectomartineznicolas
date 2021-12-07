@@ -1,0 +1,11 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(72, 42, 90);
+    font-family: 'Readex Pro', sans-serif;
+    color: white;
+}
+
+.App-header{
+    text-align: center;
+}

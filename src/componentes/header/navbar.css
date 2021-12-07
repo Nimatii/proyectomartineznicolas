@@ -1,0 +1,28 @@
+
+nav{
+    background-color: rgb(144, 109, 177);
+    line-height: 50px;
+    text-align: center;
+      
+}
+
+.navbar li{
+    display: inline;
+    
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.navbar-list{
+    margin: 0 1% ;
+    font-size: 25px;
+    
+    
+    
+    
+}
