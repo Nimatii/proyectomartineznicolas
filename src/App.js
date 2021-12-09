@@ -5,6 +5,7 @@ import "./App.css";
 //COMPONENTES
 
 import Header from "./componentes/header/Header";
+import ItemListContainer from "./componentes/main/ItemListContainer";
 
 
 function App(){
@@ -14,6 +15,7 @@ function App(){
                 <h1>PROYECTO MARTINEZ</h1>
             </div>
             <Header /> 
+            <ItemListContainer nombre="Agustin" />
         </div>
     );
 }

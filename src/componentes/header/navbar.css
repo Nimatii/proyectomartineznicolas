@@ -2,12 +2,12 @@
 nav{
     background-color: rgb(144, 109, 177);
     line-height: 50px;
-    text-align: center;
       
 }
 
-.navbar li{
-    display: inline;
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
     
 }
 
@@ -18,11 +18,9 @@ a{
 
 
 
-.navbar-list{
-    margin: 0 1% ;
-    font-size: 25px;
-    
-    
-    
-    
+.navbar li{
+    font-size: 25px;   
+    list-style-type: none;     
 }
+
+
