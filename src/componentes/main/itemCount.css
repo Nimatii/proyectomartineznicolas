@@ -1,0 +1,23 @@
+.container{
+    margin: auto;
+    width: 130px;
+    height: 75px;
+    background-color: rgb(144, 109, 177);
+}
+
+
+#contador{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+#confirmar{
+display: flex;
+justify-content: center;
+}
+
+
+button{
+    height: 20px;
+}
