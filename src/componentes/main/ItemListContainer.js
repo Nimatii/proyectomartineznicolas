@@ -1,27 +1,44 @@
 import React from "react";
-import ItemCount from "./ItemCount";
+import { useState, useEffect } from "react";
+import ItemList from "./ItemList";
 
 import "./itemlistcontainer.css"
 
 
 
-//COMPONENTES
-
+const listaDeProductos=[
+    {nombre:'Monitor', precio:20000, imagen:'../media/IMonitor.png'},
+    {nombre:'Mouse', precio:5000, imagen:'../media/IMouse.png'},
+    {nombre:'Teclado', precio:10000, imagen:'../media/ITeclado.png'}
+]
 
 
 const ItemListContainer = (props) =>{
     
-    const onAdd = () =>{
-        alert("perdon, no entendi bien que hacia esta funcion y lo del callback")
-    }
+    let [lista, setLista] = useState([])
+
+    useEffect(() => {
+        const promesa = new Promise ((res,rej)=>{
+            setTimeout(()=>{
+                res(listaDeProductos)
+            },2000)
+        })
+
+        promesa.then((productos)=>{
+            setLista(productos)
+        })
+
+    }, [])
+
+
+
+    
     
     return (<>
         <div>
             <h1>Bienvenido/a a nuestra tienda {props.nombre}</h1>
         </div>
-        <div>
-            <ItemCount stock={5} initial={0} onAdd={onAdd}/>
-        </div>
+        <ItemList lista={lista}/>
         </>
     )
 }

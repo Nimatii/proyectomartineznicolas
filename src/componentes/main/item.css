@@ -1,0 +1,7 @@
+.container{
+    margin: auto;
+    width: 130px;
+    height: 150px;
+    background-color: rgb(144, 109, 177);
+    text-align: center;
+}
