@@ -5,6 +5,7 @@ import "./App.css";
 //COMPONENTES
 
 import Header from "./componentes/header/Header";
+import ItemDetailContainer from "./componentes/main/ItemDetailContainer";
 import ItemListContainer from "./componentes/main/ItemListContainer";
 
 
@@ -16,6 +17,7 @@ function App(){
             </div>
             <Header /> 
             <ItemListContainer nombre="Agustin" />
+            <ItemDetailContainer/>
         </div>
     );
 }

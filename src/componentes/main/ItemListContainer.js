@@ -7,9 +7,9 @@ import "./itemlistcontainer.css"
 
 
 const listaDeProductos=[
-    {nombre:'Monitor', precio:20000, imagen:'../media/IMonitor.png'},
-    {nombre:'Mouse', precio:5000, imagen:'../media/IMouse.png'},
-    {nombre:'Teclado', precio:10000, imagen:'../media/ITeclado.png'}
+    {nombre:'Monitor', precio:20000, imagen:'.../media/IMonitor.png'},
+    {nombre:'Mouse', precio:5000, imagen:'.../media/IMouse.png'},
+    {nombre:'Teclado', precio:10000, imagen:'.../media/ITeclado.png'}
 ]
 
 
