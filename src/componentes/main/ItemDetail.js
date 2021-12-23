@@ -2,9 +2,9 @@ import React from 'react'
 
 import "./itemDetail.css"
 
-const ItemDetail = ({producto}) => {
-    console.log(producto)
-    return (
+const ItemDetail = ({producto, id}) => {
+    if(producto.nombre === id){
+        return (
         <div className='containerDetalle'>
             <div>
                 <h3>{producto.nombre}</h3>
@@ -14,7 +14,11 @@ const ItemDetail = ({producto}) => {
             </div>           
         </div>
         
-    )
+    )}
+    else{
+        return(<p></p>)
+    }
+    
 }
 
 export default ItemDetail

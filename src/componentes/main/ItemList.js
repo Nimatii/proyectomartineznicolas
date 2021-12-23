@@ -2,11 +2,20 @@ import React from 'react'
 import Item from "./Item";
 
 
-const ItemList=({lista}) =>{
+const ItemList=({lista, categoria}) =>{
     return (
         <div>
             {lista.map((item, index)=>{
-                return<Item key={index} item={item}/>
+                console.log(categoria === undefined)
+                if(categoria === undefined){
+                    
+                    return<Item key={index} item={item}/>
+                    
+                }
+                else if(item.categoria === categoria){
+                    return<Item key={index} item={item}/>
+                }
+                
             })}
         </div>
     )

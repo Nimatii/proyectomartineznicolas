@@ -1,5 +1,6 @@
 import React from 'react'
 import ItemDetail from './ItemDetail'
+import { useParams } from 'react-router-dom';
 
 import { useState, useEffect } from "react";
 
@@ -9,6 +10,8 @@ const productoInicial=
 
 const ItemDetailContainer = () => {
     let [producto, setProducto] = useState({})
+    const {id} = useParams()
+    console.log(id)
 
     useEffect(() => {
         const promesa = new Promise ((res,rej)=>{
@@ -21,13 +24,13 @@ const ItemDetailContainer = () => {
             setProducto(productos)
         })
 
-    }, [])
+    }, [id])
 
     console.log(producto)
     
     return (
         <div>
-            <ItemDetail producto={producto}/>
+            <ItemDetail producto={producto} id={id}/>
         </div>
     )
 }
