@@ -1,9 +1,4 @@
-.container{
-    margin: auto;
-    width: 130px;
-    height: 75px;
-    background-color: rgb(144, 109, 177);
-}
+
 
 
 #contador{
@@ -18,6 +13,3 @@ justify-content: center;
 }
 
 
-button{
-    height: 20px;
-}

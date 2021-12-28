@@ -1,10 +1,11 @@
 import React from 'react'
 import Item from "./Item";
+import "./itemList.css"
 
 
 const ItemList=({lista, categoria}) =>{
     return (
-        <div>
+        <div id='listContainer'>
             {lista.map((item, index)=>{
                 console.log(categoria === undefined)
                 if(categoria === undefined){

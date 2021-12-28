@@ -3,13 +3,13 @@ import { useState } from 'react'
 
 import "./itemCount.css"
 
-export default function ItemCount(props) {
+export default function ItemCount({onAdd}) {
     
     const [count, setCount] = useState(0)
     
     const sumar=() =>{
-        if(count < (props.stock))
-        {setCount(count + 1)}
+    
+        setCount(count + 1)
     }
 
     const restar=() =>{
@@ -17,18 +17,21 @@ export default function ItemCount(props) {
         {setCount(count - 1)}
     }
     
+    const agregarItem = () => {
+        onAdd(count)
+    }
     
     
     return (
-        <div className='container'>
+        <>
             <div id='contador'>
                 <button onClick={restar}>-</button>            
                 <p>{count}</p>
                 <button onClick={sumar}>+</button>            
             </div>
             <div id="confirmar">
-                <button onClick={props.onAdd}>Confirmar</button>
+            <button onClick={agregarItem}>Confirmar</button>
             </div>
-        </div>
+        </>
     )
 }
