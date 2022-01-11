@@ -1,12 +1,17 @@
 import React from 'react'
 import ItemCount from './ItemCount'
+import { useContexto } from './CarritoContext'
 
 import "./itemDetail.css"
 
 const ItemDetail = ({producto, id}) => {
 
+    const {addItem} = useContexto()
+
     const onAdd = (cantidad)=>{ 
         console.log("Cantidad de items seleccionados: " + cantidad)
+    
+        
     } 
 
     if(producto.nombre === id){
