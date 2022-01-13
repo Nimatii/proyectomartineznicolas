@@ -10,6 +10,7 @@ const ItemDetail = ({producto, id}) => {
 
     const onAdd = (cantidad)=>{ 
         console.log("Cantidad de items seleccionados: " + cantidad)
+        addItem(producto,cantidad)
     
         
     } 

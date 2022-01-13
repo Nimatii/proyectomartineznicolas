@@ -7,7 +7,6 @@ import { Link, NavLink } from 'react-router-dom';
 const Navbar = ({links}) => {
 
     
-    console.log(links)
     return (        
             <nav>
                 <ul className="navbar">

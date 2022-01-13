@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { NavLink } from 'react-router-dom';
 
 import "./itemCount.css"
 
@@ -30,7 +31,7 @@ export default function ItemCount({onAdd}) {
                 <button onClick={sumar}>+</button>            
             </div>
             <div id="confirmar">
-            <button onClick={agregarItem}>Confirmar</button>
+            <NavLink to='/Carrito' ><button onClick={agregarItem}>Confirmar</button></NavLink>
             </div>
         </>
     )

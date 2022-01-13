@@ -12,33 +12,40 @@ export const useContexto = () =>{
 
 const CustomProvider= ({children}) =>{
 
+    const [precio_carrito, setPrecioCarrito]  = useState(0)
     const [cantidad_carrito, setCantidadCarrito] = useState(0)
     const [carrito, setCarrito] = useState([])
-    const array = [carrito]
-
-    const prueba =() =>{
-        setCantidadCarrito(10)
-    }
     
 
-    const addItem = (item, quantity) =>{
-        if(isInCart()){
-            
 
-
-        }else{
+    const addItem = (producto, cantidad) =>{
+        console.log('asd')
+        console.log(producto,cantidad)
+        
             
-            array.push(item,quantity)
-            setCarrito(array)
-        }
+            const copia= {...producto}
+            copia.cantidad = cantidad
+            
+            setCarrito([...carrito,copia])
+
+            setCantidadCarrito(cantidad_carrito + 1)
+            setPrecioCarrito(precio_carrito + (producto.precio * cantidad))
+        
     }
 
-    const removeItem = (id) =>{}
+    const removeItem = (nombre) =>{
 
-    const clear=() => {setCarrito([])}
+        setCarrito(carrito.filter(producto => producto.nombre !== nombre))
+    }
 
-    const isInCart = (id) =>{
-        return carrito.find(item => item.id === id)
+    const clear=() => {
+        setCarrito([])
+        setPrecioCarrito(0)
+        setCantidadCarrito(0)
+    }
+
+    const isInCart = (nombre) =>{
+        return carrito.find(producto => producto.nombre === nombre)
 
     }
 
@@ -46,9 +53,10 @@ const CustomProvider= ({children}) =>{
         removeItem,
         clear,
         isInCart,
+        addItem,
         cantidad_carrito,
-        carrito,
-        prueba
+        precio_carrito,
+        carrito
     }
 
     return(
